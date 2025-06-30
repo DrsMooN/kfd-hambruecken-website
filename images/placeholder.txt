@@ -1,0 +1,12 @@
+Hier können Sie Bilder für die Ausflüge platzieren.
+
+Unterstützte Formate: JPG, PNG, GIF
+Empfohlene Größe: 800x600 Pixel oder größer
+
+Beispiel-Dateinamen:
+- herbstspaziergang.jpg
+- weihnachtsfeier.png
+- ausflug-zum-see.jpg
+
+Diese Bilder können dann in der Website referenziert werden als:
+images/herbstspaziergang.jpg 
