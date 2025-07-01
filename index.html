@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frauenverein - Gemeinsam erleben</title>
+    <title>kfd Hambrücken - Katholische Frauengemeinschaft Deutschlands</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
@@ -11,7 +11,13 @@
     <header>
         <nav class="navbar">
             <div class="nav-container">
-                <h1 class="nav-title">Frauenverein</h1>
+                <div class="nav-brand">
+                    <img src="images/kfd-logo.svg" alt="kfd Logo" class="nav-logo">
+                    <div class="nav-title-group">
+                        <h1 class="nav-title">kfd Hambrücken</h1>
+                        <p class="nav-subtitle">Katholische Frauengemeinschaft Deutschlands</p>
+                    </div>
+                </div>
                 <ul class="nav-menu">
                     <li><a href="#home" class="nav-link">Startseite</a></li>
                     <li><a href="#gallery" class="nav-link">Unsere Ausflüge</a></li>
@@ -27,8 +33,8 @@
         <!-- Hero Section -->
         <section id="home" class="hero">
             <div class="hero-content">
-                <h2>Willkommen bei unserem Frauenverein</h2>
-                <p>Gemeinsam erleben wir wundervolle Momente und schaffen unvergessliche Erinnerungen.</p>
+                <h2>Willkommen bei der kfd Hambrücken</h2>
+                <p>Starke Frauen gestalten Veränderung - Gemeinsam für Gleichberechtigung und Gleichstellung in Kirche und Gesellschaft.</p>
             </div>
         </section>
 
@@ -84,13 +90,13 @@
                 <div class="about-content">
                     <div class="about-text">
                         <div class="about-intro">
-                            <h3>Herzlich willkommen in unserem Frauenverein!</h3>
-                            <p>Wir sind eine lebendige Gemeinschaft von Frauen, die das Leben in vollen Zügen genießen und gemeinsam wundervolle Momente erleben.</p>
+                            <h3>Herzlich willkommen bei der kfd Hambrücken!</h3>
+                            <p>Wir sind eine lebendige Pfarrgruppe der Katholischen Frauengemeinschaft Deutschlands, die sich für Gleichberechtigung und Gleichstellung in Kirche und Gesellschaft einsetzt.</p>
                         </div>
                         
                         <div class="about-mission">
                             <h4>Unsere Mission</h4>
-                            <p>Freundschaft fördern, Erfahrungen teilen und gemeinsam aktiv bleiben - das ist unser Motto. Seit vielen Jahren bringen wir Frauen zusammen, um neue Freundschaften zu knüpfen und bestehende zu vertiefen.</p>
+                            <p>Als Teil der größten katholischen Frauenorganisation Deutschlands setzen wir uns für die Rechte und Interessen von Frauen ein. Wir leben christliche Spiritualität und gestalten aktiv unsere Gesellschaft mit.</p>
                         </div>
                         
                         <div class="about-activities">
@@ -182,14 +188,7 @@
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Frauenverein. Mit Liebe erstellt für unsere Gemeinschaft.</p>
-            <div class="admin-access">
-                <button id="adminToggle" class="admin-toggle-btn" onclick="toggleAdminLogin()">Admin</button>
-            </div>
-        </div>
-    </footer>
+
 
     <!-- Admin Login Modal -->
     <div id="adminModal" class="modal">
@@ -536,6 +535,53 @@
             <div id="modalBody"></div>
         </div>
     </div>
+
+    <!-- Impressum & Datenschutz -->
+    <section id="impressum" class="impressum-section" style="background: #f3f4f6; padding: 60px 0;">
+        <div class="container" style="max-width: 800px; margin: 0 auto; font-size: 14px;">
+            <h2 style="text-align: center; color: #dc005a; margin-bottom: 30px;">Impressum & Datenschutz</h2>
+            <h3>Angaben gemäß § 5 TMG</h3>
+            <p>Frauenverein Musterstadt<br>
+            Musterstraße 1<br>
+            12345 Musterstadt<br>
+            Deutschland</p>
+            <p><strong>Vertreten durch:</strong><br>
+            [Name der Leiterin] (Leitung der kfd Pfarrgruppe Hambrücken)</p>
+            <p><strong>Kontakt:</strong><br>
+            Telefon: 01234-567890<br>
+            E-Mail: info@kfd-hambruecken.de</p>
+            <h3>Haftungsausschluss</h3>
+            <p>Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.</p>
+            <h3>Datenschutzerklärung</h3>
+            <p>Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Personenbezogene Daten werden auf dieser Website nur im technisch notwendigen Umfang erhoben (z.B. für die Nutzung der lokalen Speicherfunktion im Browser). Eine Weitergabe an Dritte erfolgt nicht.</p>
+            <ul>
+                <li>Es werden keine Cookies oder Tracking-Tools eingesetzt.</li>
+                <li>Alle eingegebenen Daten verbleiben ausschließlich im Browser des Nutzers (localStorage).</li>
+                <li>Es findet keine Übertragung personenbezogener Daten an den Website-Betreiber oder Dritte statt.</li>
+                <li>Bei Fragen zum Datenschutz wenden Sie sich bitte an die oben genannte Kontaktadresse.</li>
+            </ul>
+            <h3>Rechte der betroffenen Personen</h3>
+            <p>Sie haben das Recht auf Auskunft über die bei uns gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger sowie den Zweck der Datenverarbeitung. Ebenso haben Sie das Recht auf Berichtigung, Sperrung oder Löschung dieser Daten.</p>
+            <h3>Beschwerderecht</h3>
+            <p>Sie haben das Recht, sich bei einer Aufsichtsbehörde zu beschweren, wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer personenbezogenen Daten nicht rechtmäßig erfolgt.</p>
+            <h3>Verantwortliche Stelle</h3>
+            <p>Verantwortlich für die Datenverarbeitung auf dieser Website ist:<br>
+            [Name der Leiterin]<br>
+            [Adresse]<br>
+            Hambrücken<br>
+            E-Mail: info@kfd-hambruecken.de</p>
+            <p style="font-size: 14px; color: #888; margin-top: 30px;">Dieses Impressum gilt auch für die Social-Media-Präsenzen des Vereins, sofern vorhanden.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 kfd Hambrücken.</p>
+            <div class="admin-access">
+                <button id="adminToggle" class="admin-toggle-btn" onclick="toggleAdminLogin()">Admin</button>
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>

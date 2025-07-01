@@ -310,7 +310,7 @@ function renderGallery() {
                 <h3>${item.title}</h3>
                 <p class="gallery-date">${item.date}</p>
                 <p>${item.description}</p>
-                <button onclick="deleteGalleryItem(${item.id})" class="btn btn-secondary" style="margin-top: 15px; font-size: 14px;">Löschen</button>
+                ${isAdminMode ? `<button onclick="deleteGalleryItem(${item.id})" class="btn btn-secondary" style="margin-top: 15px; font-size: 14px;">Löschen</button>` : ''}
             </div>
         `;
         galleryGrid.appendChild(galleryItem);
@@ -514,7 +514,7 @@ function renderCalendar() {
                 ${event.time ? `<p class="time">${event.time}</p>` : ''}
                 ${event.description ? `<p>${event.description}</p>` : ''}
                 ${isFuture && hasDetails ? '<p class="click-hint">📋 Klicken für Details</p>' : ''}
-                <button onclick="deleteCalendarEvent(${event.id})" class="btn btn-secondary" style="margin-top: 10px; font-size: 14px;">Löschen</button>
+                ${isAdminMode ? `<button onclick="deleteCalendarEvent(${event.id})" class="btn btn-secondary" style="margin-top: 10px; font-size: 14px;">Löschen</button>` : ''}
             </div>
         `;
         calendarGrid.appendChild(eventItem);
@@ -736,7 +736,7 @@ function renderFilteredGallery() {
                 <h3>${item.title}</h3>
                 <p class="gallery-date">${item.date}</p>
                 <p>${item.description}</p>
-                <button onclick="deleteGalleryItem(${item.id})" class="btn btn-secondary" style="margin-top: 15px; font-size: 14px;">Löschen</button>
+                ${isAdminMode ? `<button onclick="deleteGalleryItem(${item.id})" class="btn btn-secondary" style="margin-top: 15px; font-size: 14px;">Löschen</button>` : ''}
             </div>
         `;
         galleryGrid.appendChild(galleryItem);
@@ -784,7 +784,7 @@ function renderFilteredCalendar() {
                 ${event.time ? `<p class="time">${event.time}</p>` : ''}
                 ${event.description ? `<p>${event.description}</p>` : ''}
                 ${isFuture && hasDetails ? '<p class="click-hint">📋 Klicken für Details</p>' : ''}
-                <button onclick="deleteCalendarEvent(${event.id})" class="btn btn-secondary" style="margin-top: 10px; font-size: 14px;">Löschen</button>
+                ${isAdminMode ? `<button onclick="deleteCalendarEvent(${event.id})" class="btn btn-secondary" style="margin-top: 10px; font-size: 14px;">Löschen</button>` : ''}
             </div>
         `;
         calendarGrid.appendChild(eventItem);
