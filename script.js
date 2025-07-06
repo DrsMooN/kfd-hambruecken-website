@@ -14,29 +14,45 @@ document.addEventListener('DOMContentLoaded', function() {
     setupSearchAndFilters();
 });
 
-// Daten laden (hardcoded - keine localStorage mehr)
+// Daten laden 
 function loadData() {
-    // Beispieldaten für Ausflüge - immer frisch laden
+    // Daten für Ausflüge 
         galleryItems = [
             {
                 id: 1,
-                title: "Herbstspaziergang im Stadtpark",
-                date: "15. Oktober 2024",
-                sortDate: "2024-10-15",
-                image: "images/placeholder.jpg",
-                description: "Ein wunderschöner Herbstspaziergang durch den Stadtpark mit anschließendem Kaffee und Kuchen im Parkrestaurant. Die bunten Blätter haben uns alle verzaubert und wir hatten viele schöne Gespräche bei strahlendem Sonnenschein."
+                title: "Neckarsteinach & Heidelberg",
+                date: "1. September 2022",
+                sortDate: "2022-09-01",
+                image: "images/heidelberg.jpg",
+                description: "Unser Ausflug führt uns dieses Jahr zunächst nach Neckarsteinach, wo wir frühstücken und uns auf den Tag einstimmen werden. Anschließend genießen wir auf dem Neckar eine Bootsfahrt nach Heidelberg. Nach dem Mittagessen werden wir an zwei verschiedenen Stadtführungen teilnehmen: Eine Gruppe begleitet \"eine Bürgersfrau im Alten Heidelberg\", die andere wird mit dem eigenen Bus Heidelberg erkunden. Danach bleibt noch etwas Zeit zum Bummeln oder Eis essen, bevor wir gegen 18.45 Uhr unsere Rückfahrt antreten. Bei der Planung haben wir versucht, darauf zu achten, dass wir den Ausflug auch unter den Coronabedingungen vertreten können."
             },
             {
                 id: 2,
-                title: "Besuch im Heimatmuseum",
-                date: "28. September 2024",
-                sortDate: "2024-09-28",
-                image: "images/placeholder.jpg",
-                description: "Eine interessante Führung durch das Heimatmuseum mit vielen spannenden Geschichten aus vergangenen Zeiten. Besonders die alte Küche und die historischen Kleider fanden großen Anklang bei unseren Mitgliedern."
+                title: "Freiburg",
+                date: "29. August 2024",
+                sortDate: "2024-08-29",
+                image: "images/freiburg.jpg",
+                description: "Es ist wieder soweit: Dieses Jahr ist Freiburg das Ziel unseres Ausflugs. Wir fahren um 7.30 Uhr an der Kirche los und machen unterwegs den 1. Stopp in Altenheim, wo es wie immer unser \"traditionelles Frühstück\" und einen kleinen Morgenimpuls gibt. In Freiburg erwarten uns zwei Führungen durch die Altstadt, eine davon ist etwas kürzer und abgestimmt auf die Teilnehmerinnen, die schlechter zu Fuß sind. Nach einem eher kleinen Mittagessen im Cafe Inklusiv (nahe beim Arbeitsplatz unseres Erzbischofs), sehen wir uns einen kurzen Film zum Inneren des Freiburger Münsters an. Danach sind 2 Stunden zur freien Verfügung, wo ihr auf den Schlossberg mit seiner herrlichen Aussicht fahren oder gehen könnt oder das Münster besuchen oder einfach nur eine entspannte Pause im Stadtgarten oder einem der zahlreichen Cafés machen könnt. Auf der Rückfahrt machen wir noch einmal Pause in Rastatt um zu Abend zu essen. Gegen 20.30 Uhr kehren wir zurück."
+            },
+            {
+                id: 3,
+                title: "Weißenburg",
+                date: "31. August 2023",
+                sortDate: "2023-08-31",
+                image: "images/weißenburg.jpg",
+                description: "Wir stehen hier am Ursprungsort von Weißenburg, vor der Abteikirche St. Peter und Paul. Wer sich unter einer Abteikirche nicht so recht was vorstellen kann: Dies meint, es ist eine Kirche innerhalb eines Klosters. Unsere Abteikirche hier ist der Blickpunkt von Weißenburg. An dieser Stelle wurde im 7. Jahrhundert ein Benediktinerkloster gegründet. Die hier wirkenden Mönche erarbeiteten sich einen beträchtlichen Einfluss, so dass die Abtei bald zu den reichsten im Heiligen Römischen Reich gehörte. Das Benediktinerkloster wurde von einem Bischof aus unserer Gegend, vom Bischof Dragobodo aus Speyer gegründet. Diese heutige Kirche stammt aus dem 13. Jahrhundert, sie ist die zweitgrößte gotische Kirche im Elsass. Die Abteikirche hat im Inneren einiges zu bieten, vor allem die Christopherusdarstellung an der Ostwand der Kirche. Eine weitere Besonderheit ist ein Kreuzgang vom Anfang des 14. Jahrhunderts, der als einer der schönsten des Oberrheins angesehen wird. In der kleinen römischen Kapelle gibt es eine ganz besondere Fensterscheibe, die älteste Glasscheibe der Welt aus dem 11. Jahrhundert."
+            },
+            {
+                id: 4,
+                title: "Wertheim",
+                date: "29. August 2019",
+                sortDate: "2019-08-29",
+                image: "images/wertheim.jpg",
+                description: "Wertheim ist die nordöstlichste Stadt von BW, gelegen an Main und Tauber. Sie ist nur 4x so groß wie Hambrücken, aber vom ganzen Erscheinungsbild her eine Stadt. Und im Unterschied zu Hambrücken, wo kaum etwas Altes erhalten ist, ist Wertheim eine moderne Stadt in historischen Mauern. Vor allem in der Altstadt werden wir das erfahren. Eine besondere Sehenswürdigkeit in Wertheim ist die Burg, wo wir aber mit der Stadtführung nicht hinkommen werden. Sie war einst Sitz der Grafen von Wertheim und gilt heute als eine der schönsten Burgruinen Deutschlands mit einem herrlichen Ausblick über die Altstadt und Main und Tauber. Mit dem Bau der Burg wurde bereits im 12. Jhd. begonnen und dann wurde sie bis ins 17. Jhd. immer weiter ausgebaut. Der 30-jährige Krieg brachte das Ende für die Burg. Man hat sie dann wohl etwas stiefmütterlich behandelt, so dass in den 60er Jahren Mauern einzustürzen begannen. 1982 wurde die Burg grundsaniert und zu dem gemacht, was sie heute ist: Touristenattraktion und Rahmen für verschiedene kulturelle Angebote. Für uns interessant ist, dass es dort ein Burgrestaurant gibt, wo man mit einem tollen Ausblick gut Kaffee trinken kann. Und wer will, kann auch gegen eine kleine Gebühr einen Rundgang durch die weitläufige Burganlage machen. Zur Burg kommt man nur zu Fuß (was wir aber nicht unbedingt empfehlen würden) oder mit der Geckobahn hinauf. Hinab ist es etwas anderes: Wer einigermaßen gut zu Fuß ist, kann einen relativ kurzen Weg nach unten gehen, der am Ende der Fußgängerzone herauskommt. Die anderen können mit der Geckobahn wieder herunterfahren, die jeweils um 20 oder 50 einer voller Stunde, also alle halbe Stunde, fährt. Wer nicht auf die Burg will, dem empfehlen wir das Glasmuseum in der Altstadt. Es ist keine Glasbläserei wie beispielsweise in Wolfach im Schwarzwald; obwohl es auch einen echten Glasbläser gibt, dem wir bei der Arbeit zuschauen können, ist hier der Schwerpunkt das Museum. Es werden Gläser gezeigt vom ägyptischen Luxusglas über Weihnachtsschmuck bis hin zum modernen Glas in Wissenschaft, Medizin und Industrie. Da findet man z.B. Glasaugen, die wir hoffentlich alle nie brauchen werden, verschiedene Linsen, mit denen man sich vielleicht ganz schlank machen kann im Spiegel, man kann ausprobieren, wie man mit Glas messen kann usw. Es gibt dazu insgesamt 35 Glas-Spielstationen, für Schulkinder entworfen, aber auch für uns Erwachsene durchaus interessant. Von 14-16 Uhr ist auch der Museumsglasbläser da, ein Rentner, der bis heute begeistert ist von seinem Beruf. Wer möchte, kann gegen eine Gebühr mit ihm zusammen seine eigene Glaskugel blasen."
             }
         ];
     
-    // Beispieldaten für Events - immer frisch laden
+    // Daten für Events 
         calendarEvents = [
             {
             id: 1,
@@ -188,9 +204,21 @@ function loadData() {
 function renderGallery() {
     galleryGrid.innerHTML = '';
     
-    galleryItems.forEach(item => {
+    // Sort gallery items by date (newest first)
+    const sortedItems = [...galleryItems].sort((a, b) => {
+        return new Date(b.sortDate) - new Date(a.sortDate);
+    });
+    
+    sortedItems.forEach(item => {
         const galleryItem = document.createElement('div');
         galleryItem.className = 'gallery-item';
+        galleryItem.style.cursor = 'pointer';
+        
+        // Truncate description to approximately 6 lines (about 200 characters)
+        const truncatedDescription = item.description.length > 200 ? 
+            item.description.substring(0, 200) + '...' : 
+            item.description;
+        
         galleryItem.innerHTML = `
             <div class="gallery-image">
                 <img src="${item.image}" alt="${item.title}" loading="lazy" onerror="this.src='images/placeholder.jpg'">
@@ -198,9 +226,11 @@ function renderGallery() {
             <div class="gallery-content">
                 <h3>${item.title}</h3>
                 <p class="gallery-date">${item.date}</p>
-                <p>${item.description}</p>
+                <p>${truncatedDescription}</p>
             </div>
         `;
+        
+        galleryItem.addEventListener('click', () => showGalleryDetails(item));
         galleryGrid.appendChild(galleryItem);
     });
 }
@@ -275,11 +305,41 @@ function closeEventDetails() {
     modal.style.display = 'none';
 }
 
+// Gallery Details Modal Functions
+function showGalleryDetails(item) {
+    const modal = document.getElementById('galleryDetailsModal');
+    const galleryDetailsBody = document.getElementById('galleryDetailsBody');
+    
+    galleryDetailsBody.innerHTML = `
+        <div class="gallery-detail-header">
+            <h2>${item.title}</h2>
+            <p class="gallery-detail-date">${item.date}</p>
+        </div>
+        
+        <div class="gallery-detail-content">
+            <div class="gallery-detail-text">${item.description}</div>
+        </div>
+    `;
+    
+    modal.style.display = 'block';
+}
+
+function closeGalleryDetails() {
+    const modal = document.getElementById('galleryDetailsModal');
+    modal.style.display = 'none';
+}
+
 // Event Details Modal Event Listeners
 window.addEventListener('click', function(event) {
     const eventDetailsModal = document.getElementById('eventDetailsModal');
     if (event.target === eventDetailsModal) {
         closeEventDetails();
+    }
+    
+    // Gallery Details Modal Event Listener
+    const galleryDetailsModal = document.getElementById('galleryDetailsModal');
+    if (event.target === galleryDetailsModal) {
+        closeGalleryDetails();
     }
 });
 
@@ -366,9 +426,21 @@ function renderFilteredGallery() {
         return;
     }
     
-    itemsToRender.forEach(item => {
+    // Sort items by date (newest first)
+    const sortedItems = [...itemsToRender].sort((a, b) => {
+        return new Date(b.sortDate) - new Date(a.sortDate);
+    });
+    
+    sortedItems.forEach(item => {
         const galleryItem = document.createElement('div');
         galleryItem.className = 'gallery-item';
+        galleryItem.style.cursor = 'pointer';
+        
+        // Truncate description to approximately 6 lines (about 400 characters)
+        const truncatedDescription = item.description.length > 400 ? 
+            item.description.substring(0, 400) + '...' : 
+            item.description;
+        
         galleryItem.innerHTML = `
             <div class="gallery-image">
                 <img src="${item.image}" alt="${item.title}" loading="lazy" onerror="this.src='images/placeholder.jpg'">
@@ -376,9 +448,11 @@ function renderFilteredGallery() {
             <div class="gallery-content">
                 <h3>${item.title}</h3>
                 <p class="gallery-date">${item.date}</p>
-                <p>${item.description}</p>
+                <p>${truncatedDescription}</p>
             </div>
         `;
+        
+        galleryItem.addEventListener('click', () => showGalleryDetails(item));
         galleryGrid.appendChild(galleryItem);
     });
 }
