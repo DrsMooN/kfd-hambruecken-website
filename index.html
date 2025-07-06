@@ -41,7 +41,7 @@
         <!-- Gallery Section -->
         <section id="gallery" class="gallery-section">
             <div class="container">
-                <h2>Unsere schönsten Ausflüge</h2>
+                <h2>Unsere Ausflüge</h2>
                 
                 <!-- Search and Filter Controls -->
                 <div class="controls-section">
@@ -76,10 +76,7 @@
                 <div class="gallery-grid" id="galleryGrid">
                     <!-- Ausflüge werden dynamisch geladen -->
                 </div>
-                <div class="admin-controls">
-                    <button id="addGalleryBtn" class="add-btn admin-only" style="display: none;">Neuen Ausflug hinzufügen</button>
-                    <button id="imageHelpBtn" class="help-btn admin-only" style="display: none;" onclick="openImageHelp()">📸 Bild-Upload-Hilfe</button>
-                </div>
+
             </div>
         </section>
 
@@ -109,22 +106,22 @@
                             <p>In unserem Jahresprogramm finden Sie ...</p>
                             
                             <div class="activity-section">
-                                <h5>Bildungsangebote:</h5>
+                                <h4>Bildungsangebote:</h4>
                                 <p>Von gesunder Ernährung, Gesundheitsthemen allgemein, über kirchliche Themen bis hin zum Kennenlernen anderer Religionen.</p>
                             </div>
                             
                             <div class="activity-section">
-                                <h5>Soziale Projekte:</h5>
+                                <h4>Soziale Projekte:</h4>
                                 <p>Eine Bastelgruppe trifft sich regelmäßig im November, um einen Adventsbasar vorzubereiten und durchzuführen. Mit dem Erlös werden verschiedene soziale Projekte unterstützt.</p>
                             </div>
                             
                             <div class="activity-section">
-                                <h5>Angebote religiöser Art ...</h5>
+                                <h4>Angebote religiöser Art ...</h4>
                                 <p>... wie Weltgebetstag der Frauen, Kreuzweg und Maiandacht und besinnliche Stunden.</p>
                             </div>
                             
                             <div class="activity-section">
-                                <h5>Gesundheitsgymnastik:</h5>
+                                <h4>Gesundheitsgymnastik:</h4>
                                 <p>Zwei Gruppen treffen sich regelmäßig montags im Pfarrheim St. Josef, Hauptstr. 95, zur Gymnastik.</p>
                                 <p><strong>16.00 - 17.00 Uhr:</strong> Stuhlgymnastik<br>
                                 <strong>19.00 - 20.00 Uhr:</strong> Schwerpunkt Wirbelsäulengymnastik</p>
@@ -168,7 +165,7 @@
                 <div class="calendar-header">
                     <h2>Unsere nächsten Termine</h2>
                     <div class="calendar-buttons">
-                        <button class="print-btn" onclick="printCalendar()">📄 Termine drucken</button>
+                    <button class="print-btn" onclick="printCalendar()">📄 Termine drucken</button>
                         <button class="print-btn" onclick="openYearProgram()">📋 Jahresprogramm</button>
                     </div>
                 </div>
@@ -184,7 +181,6 @@
                         <select id="eventTypeFilter" class="filter-select">
                             <option value="">Alle Termine</option>
                             <option value="Ausflug">Ausflüge</option>
-                            <option value="Geburtstag">Geburtstage</option>
                             <option value="Feier">Feiern</option>
                             <option value="Treffen">Treffen</option>
                             <option value="Sonstiges">Sonstiges</option>
@@ -196,9 +192,7 @@
                 <div class="calendar-grid" id="calendarGrid">
                     <!-- Termine werden dynamisch geladen -->
                 </div>
-                <div class="admin-controls">
-                    <button id="addEventBtn" class="add-btn admin-only" style="display: none;">Neuen Termin hinzufügen</button>
-                </div>
+
             </div>
         </section>
 
@@ -217,333 +211,9 @@
 
 
 
-    <!-- Admin Login Modal -->
-    <div id="adminModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeAdminModal()">&times;</span>
-            <div class="admin-login">
-                <h2>Admin-Anmeldung</h2>
-                <p>Bitte geben Sie das Passwort ein, um Inhalte zu verwalten:</p>
-                <form id="adminLoginForm">
-                    <div class="form-group">
-                        <input type="password" id="adminPassword" placeholder="Passwort eingeben..." class="admin-password-input" required>
-                    </div>
-                    <div class="form-buttons">
-                        <button type="submit" class="btn btn-primary">Anmelden</button>
-                        <button type="button" class="btn btn-secondary" onclick="closeAdminModal()">Abbrechen</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
 
-    <!-- Admin Status Bar -->
-    <div id="adminStatusBar" class="admin-status-bar" style="display: none;">
-        <div class="admin-status-content">
-            <span class="admin-status-text">🔒 Admin-Modus aktiv</span>
-            <span class="admin-timer" id="adminTimer">30:00</span>
-            <button class="admin-help-btn" onclick="openAdminHelp()">📚 Hilfe</button>
-            <button class="admin-logout-btn" onclick="logoutAdmin()">Abmelden</button>
-        </div>
-    </div>
 
-    <!-- Image Upload Help Modal -->
-    <div id="imageHelpModal" class="modal">
-        <div class="modal-content image-help-content">
-            <span class="close" onclick="closeImageHelp()">&times;</span>
-            <div class="image-help">
-                <h2>📸 Bild-Upload Anleitung</h2>
-                <p class="help-intro">So fügen Sie neue Bilder zu GitHub Pages hinzu:</p>
-                
-                <div class="help-steps">
-                    <div class="help-step">
-                        <div class="step-number">1</div>
-                        <div class="step-content">
-                            <h3>GitHub Repository öffnen</h3>
-                            <p>Gehen Sie zu Ihrem Repository auf <strong>github.com</strong></p>
-                            <div class="help-note">📁 Klicken Sie auf den <code>images/</code> Ordner</div>
-                        </div>
-                    </div>
-                    
-                    <div class="help-step">
-                        <div class="step-number">2</div>
-                        <div class="step-content">
-                            <h3>Bilder hochladen</h3>
-                            <p>Klicken Sie <strong>"Add file"</strong> → <strong>"Upload files"</strong></p>
-                            <div class="help-note">🖱️ Drag & Drop Ihre Fotos oder "choose your files"</div>
-                        </div>
-                    </div>
-                    
-                    <div class="help-step">
-                        <div class="step-number">3</div>
-                        <div class="step-content">
-                            <h3>Änderungen speichern</h3>
-                            <p><strong>Commit message:</strong> "Neue Ausflug-Bilder hinzugefügt"</p>
-                            <div class="help-note">✅ Klicken Sie "Commit changes"</div>
-                        </div>
-                    </div>
-                    
-                    <div class="help-step">
-                        <div class="step-number">4</div>
-                        <div class="step-content">
-                            <h3>In Website verwenden</h3>
-                            <p>Bei "Neuen Ausflug hinzufügen" als <strong>Bild-Pfad</strong> eingeben:</p>
-                            <div class="help-code">images/mein-ausflug-foto.jpg</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="help-tips">
-                    <h3>💡 Wichtige Tipps</h3>
-                    <ul>
-                        <li><strong>Dateinamen:</strong> Keine Umlaute, Leerzeichen oder Sonderzeichen</li>
-                        <li><strong>Gut:</strong> herbstspaziergang-2024.jpg, weihnachtsfeier.png</li>
-                        <li><strong>Schlecht:</strong> Spaziergang im Herbst (2024).JPG</li>
-                        <li><strong>Bildgröße:</strong> Optimal 800-1200px breit, max. 2MB</li>
-                        <li><strong>Formate:</strong> JPG, PNG, GIF werden unterstützt</li>
-                        <li><strong>Wartezeit:</strong> 1-2 Minuten bis Bilder online verfügbar sind</li>
-                    </ul>
-                </div>
-                
-                <div class="help-examples">
-                    <h3>📝 Beispiele für Bild-Pfade</h3>
-                    <div class="example-list">
-                        <div class="example-item">
-                            <span class="example-file">ausflug-museum-2024.jpg</span>
-                            <span class="example-path">→ images/ausflug-museum-2024.jpg</span>
-                        </div>
-                        <div class="example-item">
-                            <span class="example-file">geburtstag-maria.png</span>
-                            <span class="example-path">→ images/geburtstag-maria.png</span>
-                        </div>
-                        <div class="example-item">
-                            <span class="example-file">weihnachtsfeier-dez.jpg</span>
-                            <span class="example-path">→ images/weihnachtsfeier-dez.jpg</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="help-footer">
-                    <p><strong>📞 Bei Problemen:</strong> Kontaktieren Sie die technische Betreuung</p>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Admin-Hilfe Modal -->
-    <div id="adminHelpModal" class="modal">
-        <div class="modal-content admin-help-content">
-            <span class="close" onclick="closeAdminHelp()">&times;</span>
-            <h2>🛠️ Admin-Bereich Bedienungsanleitung</h2>
-            <div class="help-navigation">
-                <button class="help-tab active" onclick="showHelpTab('basics')">Grundlagen</button>
-                <button class="help-tab" onclick="showHelpTab('events')">Termine verwalten</button>
-                <button class="help-tab" onclick="showHelpTab('gallery')">Ausflüge verwalten</button>
-                <button class="help-tab" onclick="showHelpTab('tips')">Tipps & Tricks</button>
-            </div>
-            
-            <div id="help-basics" class="help-section active">
-                <h3>🏠 Admin-Bereich Grundlagen</h3>
-                <div class="help-step">
-                    <h4>1. Wie erkenne ich den Admin-Modus?</h4>
-                    <p>Wenn Sie erfolgreich angemeldet sind, sehen Sie:</p>
-                    <ul>
-                        <li>Eine <strong>grüne Leiste</strong> am oberen Bildschirmrand</li>
-                        <li><strong>Countdown-Timer</strong> zeigt verbleibende Zeit</li>
-                        <li><strong>Neue Buttons</strong> zum Hinzufügen und Löschen</li>
-                        <li><strong>"Logout"</strong> Button zum Abmelden</li>
-                    </ul>
-                </div>
-                
-                <div class="help-step">
-                    <h4>2. Sicherheit verstehen</h4>
-                    <p><strong>30-Minuten-Regel:</strong> Nach 30 Minuten werden Sie automatisch abgemeldet.</p>
-                    <p><strong>Warnung:</strong> 5 Minuten vor Ablauf erscheint eine Warnung.</p>
-                    <p><strong>Wichtig:</strong> Loggen Sie sich aus, wenn Sie fertig sind!</p>
-                </div>
-                
-                <div class="help-step">
-                    <h4>3. Navigation im Admin-Modus</h4>
-                    <ul>
-                        <li><strong>Grüne Buttons:</strong> Zum Hinzufügen neuer Inhalte</li>
-                        <li><strong>Rote "Löschen" Buttons:</strong> Zum Entfernen von Einträgen</li>
-                        <li><strong>Status-Leiste:</strong> Zeigt verbleibende Zeit</li>
-                        <li><strong>Hilfe-Button:</strong> Öffnet diese Anleitung</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div id="help-events" class="help-section">
-                <h3>📅 Termine verwalten - Schritt für Schritt</h3>
-                
-                <div class="help-step">
-                    <h4>1. Neuen Termin hinzufügen</h4>
-                    <ol>
-                        <li>Klicken Sie auf <strong>"Neuen Termin hinzufügen"</strong></li>
-                        <li>Füllen Sie die <strong>Grunddaten</strong> aus:
-                            <ul>
-                                <li><strong>Titel:</strong> z.B. "Weihnachtsfeier"</li>
-                                <li><strong>Art:</strong> Ausflug, Geburtstag, Feier, etc.</li>
-                                <li><strong>Datum:</strong> Klicken Sie auf das Kalender-Symbol</li>
-                                <li><strong>Uhrzeit:</strong> Optional, z.B. 15:00</li>
-                            </ul>
-                        </li>
-                        <li><strong>Beschreibung:</strong> Kurze Erklärung des Termins</li>
-                    </ol>
-                </div>
-                
-                <div class="help-step">
-                    <h4>2. Erweiterte Details hinzufügen</h4>
-                    <p><strong>📍 Ort & Anfahrt (wichtig für Detailansicht!):</strong></p>
-                    <ul>
-                        <li><strong>Veranstaltungsort:</strong> "Restaurant Zur Post"</li>
-                        <li><strong>Adresse:</strong> "Marktplatz 8, 12345 Musterstadt"</li>
-                        <li><strong>Treffpunkt:</strong> "Haupteingang Restaurant"</li>
-                        <li><strong>Abfahrtszeit:</strong> Wann die Gruppe aufbricht</li>
-                        <li><strong>Transport:</strong> "Gemeinsame Busfahrt" oder "Eigene Anreise"</li>
-                    </ul>
-                    
-                    <p><strong>💰 Organisation:</strong></p>
-                    <ul>
-                        <li><strong>Kosten:</strong> "15€ pro Person" oder "Kostenlos"</li>
-                        <li><strong>Anmeldung:</strong> "Bis 20. Dezember bei Maria"</li>
-                        <li><strong>Kontaktperson:</strong> "Maria Müller (0123-456789)"</li>
-                        <li><strong>Mitbringen:</strong> "Festes Schuhwerk, warme Kleidung"</li>
-                    </ul>
-                </div>
-                
-                <div class="help-step">
-                    <h4>3. Termine löschen</h4>
-                    <ol>
-                        <li>Finden Sie den Termin in der Liste</li>
-                        <li>Klicken Sie auf den <strong>roten "Löschen" Button</strong></li>
-                        <li><strong>Bestätigen</strong> Sie das Löschen</li>
-                        <li><strong>Achtung:</strong> Gelöschte Termine können nicht wiederhergestellt werden!</li>
-                    </ol>
-                </div>
-                
-                <div class="help-step">
-                    <h4>4. Was sehen normale Besucher?</h4>
-                    <p>Termine mit <strong>Ort & Anfahrt</strong> Daten werden für Besucher klickbar:</p>
-                    <ul>
-                        <li>Zeigen <strong>"📋 Klicken für Details"</strong> Hinweis</li>
-                        <li>Beim Klick öffnet sich ein <strong>Detail-Fenster</strong></li>
-                        <li>Nur <strong>zukünftige Termine</strong> sind klickbar</li>
-                        <li>Vergangene Termine zeigen keine Details</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div id="help-gallery" class="help-section">
-                <h3>🖼️ Ausflüge verwalten - Einfach erklärt</h3>
-                
-                <div class="help-step">
-                    <h4>1. Neuen Ausflug hinzufügen</h4>
-                    <ol>
-                        <li>Klicken Sie auf <strong>"Neuen Ausflug hinzufügen"</strong></li>
-                        <li>Füllen Sie alle Felder aus:
-                            <ul>
-                                <li><strong>Titel:</strong> z.B. "Herbstspaziergang im Park"</li>
-                                <li><strong>Datum:</strong> Wann der Ausflug stattgefunden hat</li>
-                                <li><strong>Beschreibung:</strong> Was haben Sie gemacht? Wie war es?</li>
-                            </ul>
-                        </li>
-                    </ol>
-                </div>
-                
-                <div class="help-step">
-                    <h4>2. Bilder hinzufügen - So geht's!</h4>
-                    <p><strong>Schritt 1 - Bild vorbereiten:</strong></p>
-                    <ul>
-                        <li>Foto auf Ihrem Computer haben</li>
-                        <li><strong>Guter Name:</strong> "herbstspaziergang.jpg" statt "IMG_1234.jpg"</li>
-                        <li><strong>Nicht zu groß:</strong> Unter 2 MB ist ideal</li>
-                    </ul>
-                    
-                    <p><strong>Schritt 2 - Hochladen (GitHub Pages):</strong></p>
-                    <ol>
-                        <li>Öffnen Sie Ihr <strong>GitHub Repository</strong> in einem neuen Tab</li>
-                        <li>Klicken Sie auf den <strong>"images"</strong> Ordner</li>
-                        <li>Klicken Sie <strong>"Add files"</strong> → <strong>"Upload files"</strong></li>
-                        <li>Ziehen Sie Ihr Foto in das Feld oder klicken Sie "choose your files"</li>
-                        <li>Scrollen Sie runter und klicken Sie <strong>"Commit changes"</strong></li>
-                        <li><strong>Warten Sie 2-3 Minuten!</strong> GitHub braucht Zeit.</li>
-                    </ol>
-                    
-                    <p><strong>Schritt 3 - Pfad eingeben:</strong></p>
-                    <ul>
-                        <li>Bei "Bild-URL" eingeben: <strong>images/ihr-dateiname.jpg</strong></li>
-                        <li><strong>Beispiel:</strong> Wenn Ihr Bild "herbstspaziergang.jpg" heißt</li>
-                        <li>Dann eingeben: <strong>images/herbstspaziergang.jpg</strong></li>
-                    </ul>
-                </div>
-                
-                <div class="help-step">
-                    <h4>3. Ausflüge löschen</h4>
-                    <ol>
-                        <li>Finden Sie den Ausflug in der Galerie</li>
-                        <li>Klicken Sie den <strong>roten "Löschen" Button</strong></li>
-                        <li><strong>Bestätigen</strong> Sie das Löschen</li>
-                        <li><strong>Wichtig:</strong> Das Bild bleibt im images-Ordner!</li>
-                    </ol>
-                </div>
-            </div>
-            
-            <div id="help-tips" class="help-section">
-                <h3>💡 Tipps & Tricks für den Admin-Bereich</h3>
-                
-                <div class="help-step">
-                    <h4>✅ Das sollten Sie immer machen</h4>
-                    <ul>
-                        <li><strong>Loggen Sie sich aus:</strong> Klicken Sie "Logout" wenn Sie fertig sind</li>
-                        <li><strong>Testen Sie alles:</strong> Schauen Sie sich neue Einträge als normaler Besucher an</li>
-                        <li><strong>Backups machen:</strong> Notieren Sie sich wichtige Informationen</li>
-                        <li><strong>Bilder prüfen:</strong> Schauen Sie, ob Bilder richtig angezeigt werden</li>
-                    </ul>
-                </div>
-                
-                <div class="help-step">
-                    <h4>⚠️ Häufige Fehler vermeiden</h4>
-                    <ul>
-                        <li><strong>Nicht zu schnell:</strong> Warten Sie nach dem Bild-Upload</li>
-                        <li><strong>Richtige Pfade:</strong> Immer "images/" vor dem Dateinamen</li>
-                        <li><strong>Bestätigung lesen:</strong> Beim Löschen immer genau lesen</li>
-                        <li><strong>Timer beachten:</strong> Auf die verbleibende Zeit achten</li>
-                    </ul>
-                </div>
-                
-                <div class="help-step">
-                    <h4>🆘 Wenn etwas nicht funktioniert</h4>
-                    <ul>
-                        <li><strong>Seite neu laden:</strong> F5 drücken oder Browser neu starten</li>
-                        <li><strong>Bild nicht da?</strong> 5 Minuten warten, dann neu laden</li>
-                        <li><strong>Button funktioniert nicht?</strong> Neu anmelden im Admin-Bereich</li>
-                        <li><strong>Daten weg?</strong> Beispieldaten werden automatisch geladen</li>
-                    </ul>
-                </div>
-                
-                <div class="help-step">
-                    <h4>📱 Handy & Tablet nutzen</h4>
-                    <ul>
-                        <li><strong>Funktioniert:</strong> Admin-Bereich läuft auch auf dem Handy</li>
-                        <li><strong>Tippen statt klicken:</strong> Alle Buttons funktionieren per Touch</li>
-                        <li><strong>Bilder hochladen:</strong> Geht auch vom Handy (über GitHub-App)</li>
-                        <li><strong>Tipp:</strong> Größerer Bildschirm ist einfacher zu bedienen</li>
-                    </ul>
-                </div>
-                
-                <div class="help-step">
-                    <h4>🎯 Profi-Tipp: Gute Termine erstellen</h4>
-                    <ul>
-                        <li><strong>Aussagekräftige Titel:</strong> "Weihnachtsfeier 2024" statt nur "Feier"</li>
-                        <li><strong>Vollständige Infos:</strong> Je mehr Details, desto besser für die Mitglieder</li>
-                        <li><strong>Kontaktperson:</strong> Immer eine Ansprechperson angeben</li>
-                        <li><strong>Rechtzeitig eintragen:</strong> Termine früh genug bekanntgeben</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Event Details Modal -->
     <div id="eventDetailsModal" class="modal">
@@ -555,13 +225,7 @@
         </div>
     </div>
 
-    <!-- Modal für neue Einträge -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div id="modalBody"></div>
-        </div>
-    </div>
+
 
     <!-- Impressum & Datenschutz -->
     <section id="impressum" class="impressum-section" style="background: #f3f4f6; padding: 60px 0;">
@@ -604,9 +268,6 @@
     <footer>
         <div class="container">
             <p>&copy; 2024 kfd Hambrücken.</p>
-            <div class="admin-access">
-                <button id="adminToggle" class="admin-toggle-btn" onclick="toggleAdminLogin()">Admin</button>
-            </div>
         </div>
     </footer>
 

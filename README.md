@@ -4,7 +4,7 @@ Eine moderne, benutzerfreundliche Homepage für die **Katholische Frauengemeinsc
 
 ## 🌟 Über die Website
 
-Diese Website wurde speziell für die kfd Hambrücken entwickelt und bietet eine einfache Möglichkeit, Ausflüge zu dokumentieren, Termine zu verwalten und die Gemeinschaft zu stärken.
+Diese Website wurde speziell für die kfd Hambrücken entwickelt und bietet eine übersichtliche Präsentation der Gemeinschaftsaktivitäten, Termine und Informationen.
 
 ## ✨ Hauptfunktionen
 
@@ -14,7 +14,8 @@ Diese Website wurde speziell für die kfd Hambrücken entwickelt und bietet eine
 - 📱 **Responsive Design**: Funktioniert perfekt auf Desktop, Tablet und Smartphone
 - 👥 **Seniorenfreundlich**: Große Schrift, klare Kontraste und intuitive Navigation
 - 🎨 **kfd-Branding**: Offizielle kfd-Farben und Corporate Design
-- 🔒 **Admin-Bereich**: Geschützter Bereich für Inhalts-Verwaltung
+- 📄 **Druckfunktion**: Terminkalender als PDF drucken
+- 📋 **Jahresprogramm**: Link zum vollständigen Jahresprogramm
 
 ## 🎨 Design-Features
 
@@ -36,18 +37,18 @@ Die Website ist live verfügbar und wird automatisch über GitHub Pages gehostet
 3. Fertig! Website läuft lokal
 
 ### Online-Version
-Die Website ist bereits online verfügbar und wird automatisch aktualisiert.
+Die Website ist bereits online verfügbar und zeigt aktuelle Informationen und Termine.
 
 ## 📸 Bilder
 
-Die Website zeigt Bilder von Ausflügen und Veranstaltungen der kfd Hambrücken. Neue Bilder werden von der technischen Betreuung hinzugefügt.
+Die Website zeigt Beispielbilder von Ausflügen und Veranstaltungen. Für neue Bilder ist eine technische Bearbeitung der Website erforderlich.
 
 ## 🛠️ Technische Details
 
 ### Technologie-Stack
 - **Frontend**: HTML5, CSS3, JavaScript (ES6+)
 - **Styling**: CSS Grid, Flexbox, CSS Transitions
-- **Speicherung**: Browser localStorage
+- **Datenstruktur**: Statische Inhalte (hardcoded)
 - **Hosting**: GitHub Pages (statisch)
 
 ### Browser-Kompatibilität
@@ -58,19 +59,41 @@ Die Website zeigt Bilder von Ausflügen und Veranstaltungen der kfd Hambrücken.
 ### Performance
 - 🚀 **Schnell**: Keine Server-Anfragen für Inhalte
 - 📱 **Responsive**: Optimiert für alle Bildschirmgrößen
-- 💾 **Offline-fähig**: Funktioniert ohne Internet (nach erstem Laden)
+- 💾 **Zuverlässig**: Konsistente Darstellung für alle Besucher
+- 🔄 **Wartungsarm**: Statische Inhalte ohne komplexe Datenverwaltung
+
+## 📋 Aktuelle Inhalte
+
+### Terminkalender 2025
+Die Website zeigt alle wichtigen Termine für 2025:
+- Gedenkgottesdienste und religiöse Veranstaltungen
+- Ausflüge und Tagesfahrten (z.B. nach Pirmasens)
+- Vorträge und Workshops
+- Feiern und Gemeinschaftsveranstaltungen
+- Adventsbasar und saisonale Events
+
+### Ausflüge-Galerie
+- Dokumentation vergangener Ausflüge
+- Beispielfotos und Beschreibungen
+- Filterfunktion nach Jahr und Monat
 
 ## 🎨 Anpassungen
 
-### Farben (falls gewünscht)
+### Farben
 Haupt-kfd-Farben in `styles.css`:
 - `#dc005a` - Hauptfarbe (kfd-Pink)
 - `#e91e63` - Sekundärfarbe (helles Pink)
 - `#c2185b` - Hover-Farbe (dunkles Pink)
 
+### Inhaltsänderungen
+Für Änderungen an Terminen, Ausflügen oder anderen Inhalten ist eine technische Bearbeitung der folgenden Dateien erforderlich:
+- **Termine**: `script.js` (calendarEvents Array)
+- **Ausflüge**: `script.js` (galleryItems Array)
+- **Texte**: `index.html` (About-Sektion, Kontaktdaten)
+
 ## 🔄 Updates & Wartung
 
-Die Website wird automatisch aktualisiert und gewartet. Alle Änderungen werden von der technischen Betreuung vorgenommen.
+Die Website zeigt statische Inhalte und erfordert für Aktualisierungen eine technische Bearbeitung. Alle Änderungen werden von der technischen Betreuung vorgenommen.
 
 ## 🆘 Troubleshooting
 
@@ -86,15 +109,15 @@ Die Website wird automatisch aktualisiert und gewartet. Alle Änderungen werden 
 - 2-3 Minuten nach Upload warten
 - Browser-Cache leeren (Strg + F5)
 
-**🔴 Funktionen nicht verfügbar**
+**🔴 Inhalte nicht aktuell**
 - Browser-Cache leeren (Strg + F5)
 - Auf HTTPS-Version der Website wechseln
-- Bei Problemen technische Betreuung kontaktieren
+- Bei veralteten Inhalten technische Betreuung kontaktieren
 
-**🔴 Änderungen nicht sichtbar**
-- 1-2 Minuten warten (GitHub Build-Zeit)
-- Browser-Cache leeren
-- Inkognito-Modus testen
+**🔴 Jahresprogramm PDF nicht verfügbar**
+- PDF-Datei muss im Root-Verzeichnis liegen
+- Dateiname: `Jahresprogramm 2025.pdf` (exakt)
+- Bei Problemen alternative Lösung mit technischer Betreuung besprechen
 
 ### Support-Ressourcen
 - 📖 [GitHub Pages Dokumentation](https://docs.github.com/en/pages)
@@ -106,16 +129,37 @@ Die Website wird automatisch aktualisiert und gewartet. Alle Änderungen werden 
 
 ### Mögliche Erweiterungen
 - 📧 **Newsletter-Anmeldung**
-- 📷 **Foto-Upload direkt über Website**
+- 🔄 **Content Management System (CMS)**
 - 👥 **Mitglieder-Bereich**
 - 📱 **Progressive Web App (PWA)**
-- 🔔 **Push-Benachrichtigungen für Termine**
+- 🔔 **Automatische Terminbenachrichtigungen**
+- 📷 **Erweiterte Foto-Galerie**
 
 ### Wartung
 - ✅ **Keine Server-Wartung** nötig
 - ✅ **Automatische SSL-Zertifikate**
 - ✅ **GitHub übernimmt Hosting-Infrastruktur**
 - ✅ **Kostenlos für öffentliche Repositories**
+- ⚠️ **Inhaltsaktualisierungen** erfordern technische Bearbeitung
+
+## 🏗️ Website-Architektur
+
+### Dateistruktur
+```
+├── index.html          # Hauptseite mit allen Inhalten
+├── script.js           # JavaScript-Funktionalität und Daten
+├── styles.css          # CSS-Styling und Design
+├── images/             # Bildordner
+│   ├── kfd-logo.svg   # Offizielles kfd-Logo
+│   └── placeholder.jpg # Beispielbilder
+└── README.md          # Diese Dokumentation
+```
+
+### Datenstruktur
+- **Termine**: Hardcoded in `script.js` als JavaScript-Array
+- **Ausflüge**: Hardcoded in `script.js` als JavaScript-Array
+- **Texte**: Direkt in HTML eingefügt
+- **Styling**: CSS-Dateien ohne externe Abhängigkeiten
 
 ## 📄 Lizenz
 
