@@ -124,102 +124,150 @@ function loadData() {
     if (savedEvents) {
         calendarEvents = JSON.parse(savedEvents);
     } else {
-        // Beispieldaten für Termine hinzufügen wenn keine Daten vorhanden sind
+        // Termine 2025 für die kfd Hambrücken
         calendarEvents = [
             {
                 id: 1,
-                title: "Weihnachtsfeier",
-                day: "20",
-                month: "DEZ",
-                time: "15:00 Uhr",
-                type: "Feier",
-                description: "Gemütliche Weihnachtsfeier im Gemeindehaus mit Kaffee, Kuchen und Wichtelgeschenken",
-                sortDate: "2024-12-20",
-                location: "Gemeindehaus St. Martin",
-                address: "Kirchgasse 12, 12345 Musterstadt",
-                meetingPoint: "Haupteingang Gemeindehaus",
-                departureTime: "14:45 Uhr",
-                transport: "Zu Fuß oder eigene Anreise",
-                costs: "5€ pro Person für Kaffee und Kuchen",
-                registration: "Bis 15. Dezember bei Maria",
-                contact: "Maria Müller (0123-456789)",
-                bringAlong: "Wichtelgeschenk bis 5€"
+                title: "Gedenkgottesdienst für verstorbene Frauen",
+                day: "16",
+                month: "JAN",
+                time: "18:30 Uhr",
+                type: "Treffen",
+                description: "Gedenkgottesdienst für die verstorbenen Frauen des vergangenen Jahres, anschließend im Pfarrheim St. Josef Jahreshauptversammlung: Rückblick auf das vergangene Jahr mit Diaschau - Ausblick",
+                sortDate: "2025-01-16",
+                details: ""
             },
             {
                 id: 2,
-                title: "Geburtstag Maria",
-                day: "05",
-                month: "JAN",
-                time: "",
-                type: "Geburtstag",
-                description: "Maria wird 75 Jahre! Wir gratulieren herzlich",
-                sortDate: "2025-01-05",
-                location: "",
-                address: "",
-                meetingPoint: "",
-                departureTime: "",
-                transport: "",
-                costs: "",
-                registration: "",
-                contact: "",
-                bringAlong: ""
+                title: "Valentinstag Beisammensein",
+                day: "14",
+                month: "FEB",
+                time: "16:00 Uhr",
+                type: "Treffen",
+                description: "Gemütliches Beisammensein im Pfarrheim St. Josef mit besinnlichen Gedanken zum Valentinstag",
+                sortDate: "2025-02-14",
+                details: ""
             },
             {
                 id: 3,
-                title: "Neujahrsbrunch",
-                day: "12",
-                month: "JAN",
-                time: "11:00 Uhr",
+                title: "Weltgebetstag der Frauen",
+                day: "07",
+                month: "MÄR",
+                time: "19:00 Uhr",
                 type: "Treffen",
-                description: "Gemeinsamer Brunch zum neuen Jahr im Restaurant Zur Post",
-                sortDate: "2025-01-12",
-                location: "Restaurant Zur Post",
-                address: "Marktplatz 8, 12345 Musterstadt",
-                meetingPoint: "Restaurant-Eingang",
-                departureTime: "",
-                transport: "Eigene Anreise",
-                costs: "Buffet ca. 15€ pro Person",
-                registration: "Bis 8. Januar erforderlich",
-                contact: "Anna Schmidt (0123-987654)",
-                bringAlong: "Gute Laune für das neue Jahr"
+                description: "Weltgebetstag der Frauen in Kirrlach, gestaltet von den Frauengruppen der Seelsorgeeinheit und der ev. Gemeinde",
+                sortDate: "2025-03-07",
+                details: ""
             },
             {
                 id: 4,
-                title: "Handarbeitskreis",
-                day: "18",
-                month: "JAN",
-                time: "14:00 Uhr",
+                title: "Kreuzwegandacht",
+                day: "23",
+                month: "MÄR",
+                time: "18:00 Uhr",
                 type: "Treffen",
-                description: "Monatliches Treffen des Handarbeitskreises - Stricken und Häkeln",
-                sortDate: "2025-01-18",
-                location: "Gemeindesaal",
-                address: "Am Kirchplatz 3, 12345 Musterstadt",
-                meetingPoint: "Seiteneingang Gemeindesaal",
-                departureTime: "",
-                transport: "Eigene Anreise",
-                costs: "2€ für Kaffee und Gebäck",
-                registration: "Nicht erforderlich",
-                contact: "Gisela Hartmann (0123-333444)",
-                bringAlong: "Aktuelle Handarbeit und Materialien"
+                description: "Kreuzwegandacht in der Kirche",
+                sortDate: "2025-03-23",
+                details: ""
             },
             {
                 id: 5,
-                title: "Ausflug ins Grüne",
-                day: "15",
-                month: "FEB",
-                time: "10:00 Uhr",
+                title: "Gesundheitsvortrag",
+                day: "11",
+                month: "APR",
+                time: "19:00 Uhr",
+                type: "Treffen",
+                description: "Vortrag: Gesundheitsfürsorge: Wieviel ist noch gesund? Wie wirken sich Alkohol und Medikamente auf meinen Körper aus? Referentin Ann-Kathrin Merz, Suchtberatungsstelle Ettlingen",
+                sortDate: "2025-04-11",
+                details: ""
+            },
+            {
+                id: 6,
+                title: "Maiandacht",
+                day: "20",
+                month: "MAI",
+                time: "18:00 Uhr",
+                type: "Treffen",
+                description: "Maiandacht, anschließend gemütliches Beisammensein im Pfarrgarten",
+                sortDate: "2025-05-20",
+                details: ""
+            },
+            {
+                id: 7,
+                title: "Moorwanderung",
+                day: "08",
+                month: "JUL",
+                time: "17:00 Uhr",
                 type: "Ausflug",
-                description: "Frühlingsausflug zum nahegelegenen Naturpark (wetterabhängig)",
-                sortDate: "2025-02-15",
-                location: "Naturpark Waldtal",
-                address: "Am Waldrand 1, 12346 Waldstadt",
-                meetingPoint: "Bushaltestelle Marktplatz",
-                departureTime: "9:30 Uhr",
-                transport: "Gemeinsame Busfahrt",
-                costs: "12€ (Bus + Eintritt)",
-                registration: "Bis 10. Februar bei Ingrid",
-                contact: "Ingrid Weber (0123-555666)",
-                bringAlong: "Festes Schuhwerk und wetterfeste Kleidung"
+                description: "Moorwanderung mit Führung im Weingartener Moor",
+                sortDate: "2025-07-08",
+                details: ""
+            },
+            {
+                id: 8,
+                title: "Ausflug nach Pirmasens",
+                day: "28",
+                month: "AUG",
+                time: "",
+                type: "Ausflug",
+                description: "Ausflug nach Pirmasens",
+                sortDate: "2025-08-28",
+                details: "Dieses Jahr führt uns unser Ausflug in die Pfalz. Zunächst erkunden wir Pirmasens, einen Ort, den wohl bisher nur wenige von euch besucht haben. Pirmasens ist extrem hügelig, daher werden wir die Stadtführung vormittags mit unserem Bus machen. Zuvor nehmen wir uns Zeit für unser traditionelles Frühstück und genießen den schönen Park. Nach dem Mittagessen kann Pirmasens noch etwas alleine erkundet werden, bevor wir nach Hauenstein in ein Schuhmuseum aufbrechen werden. Das Schuhmuseum zeigt uns auf drei Stockwerken neben allem Wissenswertem über die Schuhherstellung auch Schuhmodelle aus ganz unterschiedlichen Zeiten und Ländern... und manche werden sich daran erinnern, was sie schon selber getragen haben! Danach fahren wir weiter nach Neupotz am Rhein und lassen den Tag bei einem guten Fischessen ausklingen.\nAbfahrt wird am 28.8.2025 um 8.00 Uhr an der Kirche sein, Rückkehr spätestens um 21 Uhr. Die Fahrtkosten betragen voraussichtlich 30 € für die Mitglieder (ist noch abhängig von der Teilnehmerzahl). Gäste sind willkommen! Bitte meldet euch bis spätestens 22.8.2025 an unter Tel.1011 (M.Baader). Wir freuen uns auf euch und einen schönen gemeinsamen Ausflug!"
+            },
+            {
+                id: 9,
+                title: "Kochworkshop",
+                day: "23",
+                month: "SEP",
+                time: "18:00 Uhr",
+                type: "Ausflug",
+                description: "Kochworkshop im Ernährungszentrum Bruchsal: Smart Kochen – gut geplant, nachhaltig und lecker, Referentin Kerstin Streibl",
+                sortDate: "2025-09-23",
+                details: ""
+            },
+            {
+                id: 10,
+                title: "Glaubensvortrag",
+                day: "17",
+                month: "OKT",
+                time: "19:00 Uhr",
+                type: "Treffen",
+                description: "Vortrag: Wie gebe ich meinen Glauben weiter? Auch in die nächste und übernächste Generation? Referentin Marieluise Gallinat-Schneider, Bruchsal",
+                sortDate: "2025-10-17",
+                details: ""
+            },
+            {
+                id: 11,
+                title: "Universum-Vortrag",
+                day: "14",
+                month: "NOV",
+                time: "19:00 Uhr",
+                type: "Treffen",
+                description: "Vortrag: Faszination Universum – Ein Physiker stellt die Frage nach Gott, Referent: Prof. Dr. Thomas Schimmel, KIT Karlsruhe",
+                sortDate: "2025-11-14",
+                details: ""
+            },
+            {
+                id: 12,
+                title: "Adventsbasar",
+                day: "29",
+                month: "NOV",
+                time: "14:00 Uhr",
+                type: "Feier",
+                description: "Adventsbasar",
+                sortDate: "2025-11-29",
+                details: ""
+            },
+            {
+                id: 13,
+                title: "Adventsfeier der Turnerinnen",
+                day: "15",
+                month: "DEZ",
+                time: "17:30 Uhr",
+                type: "Feier",
+                description: "Adventsfeier der Turnerinnen",
+                sortDate: "2025-12-15",
+                details: ""
             }
         ];
         // Termine nach Datum sortieren
@@ -487,18 +535,22 @@ function renderCalendar() {
     // Calendar-Grid leeren
     calendarGrid.innerHTML = '';
     
-    calendarEvents.forEach(event => {
+    // Filter nur zukünftige Termine
+    const today = new Date();
+    const futureEvents = calendarEvents.filter(event => {
+        const eventDate = new Date(event.sortDate);
+        return eventDate > today;
+    });
+    
+    futureEvents.forEach(event => {
         const eventItem = document.createElement('div');
         eventItem.className = 'calendar-item';
         
-        // Check if event is in the future and has detailed information
-        const eventDate = new Date(event.sortDate);
-        const today = new Date();
-        const isFuture = eventDate > today;
-        const hasDetails = event.location || event.address || event.meetingPoint;
+        // Check if event has detailed information
+        const hasDetails = event.details && event.details.trim() !== '';
         
-        // Add clickable class and cursor if it's a future event with details
-        if (isFuture && hasDetails) {
+        // Add clickable class and cursor if event has details
+        if (hasDetails) {
             eventItem.classList.add('clickable-event');
             eventItem.style.cursor = 'pointer';
             eventItem.addEventListener('click', () => showEventDetails(event));
@@ -513,7 +565,7 @@ function renderCalendar() {
                 <h3>${event.title}</h3>
                 ${event.time ? `<p class="time">${event.time}</p>` : ''}
                 ${event.description ? `<p>${event.description}</p>` : ''}
-                ${isFuture && hasDetails ? '<p class="click-hint">📋 Klicken für Details</p>' : ''}
+                ${hasDetails ? '<p class="click-hint">📋 Klicken für Details</p>' : ''}
                 ${isAdminMode ? `<button onclick="deleteCalendarEvent(${event.id})" class="btn btn-secondary" style="margin-top: 10px; font-size: 14px;">Löschen</button>` : ''}
             </div>
         `;
@@ -556,42 +608,10 @@ function showEventDetails(event) {
             </div>
         ` : ''}
         
-        ${event.location || event.address ? `
+        ${event.details && event.details.trim() !== '' ? `
             <div class="event-section">
-                <h3>📍 Ort</h3>
-                ${event.location ? `<p><strong>Veranstaltungsort:</strong> ${event.location}</p>` : ''}
-                ${event.address ? `<p><strong>Adresse:</strong> ${event.address}</p>` : ''}
-            </div>
-        ` : ''}
-        
-        ${event.meetingPoint || event.departureTime || event.transport ? `
-            <div class="event-section">
-                <h3>🚗 Anfahrt & Treffpunkt</h3>
-                ${event.meetingPoint ? `<p><strong>Treffpunkt:</strong> ${event.meetingPoint}</p>` : ''}
-                ${event.departureTime ? `<p><strong>Abfahrt:</strong> ${event.departureTime}</p>` : ''}
-                ${event.transport ? `<p><strong>Transport:</strong> ${event.transport}</p>` : ''}
-            </div>
-        ` : ''}
-        
-        ${event.costs || event.registration ? `
-            <div class="event-section">
-                <h3>💰 Kosten & Anmeldung</h3>
-                ${event.costs ? `<p><strong>Kosten:</strong> ${event.costs}</p>` : ''}
-                ${event.registration ? `<p><strong>Anmeldung:</strong> ${event.registration}</p>` : ''}
-            </div>
-        ` : ''}
-        
-        ${event.contact ? `
-            <div class="event-section">
-                <h3>📞 Kontakt</h3>
-                <p>${event.contact}</p>
-            </div>
-        ` : ''}
-        
-        ${event.bringAlong ? `
-            <div class="event-section">
-                <h3>🎒 Mitbringen</h3>
-                <p>${event.bringAlong}</p>
+                <h3>📋 Details</h3>
+                <p style="white-space: pre-line;">${event.details}</p>
             </div>
         ` : ''}
     `;
@@ -668,7 +688,14 @@ function performCalendarSearch() {
     const searchTerm = document.getElementById('calendarSearchInput').value.toLowerCase();
     const eventType = document.getElementById('eventTypeFilter').value;
     
-    filteredCalendarEvents = calendarEvents.filter(event => {
+    // Nur zukünftige Termine für die Suche berücksichtigen
+    const today = new Date();
+    const futureEvents = calendarEvents.filter(event => {
+        const eventDate = new Date(event.sortDate);
+        return eventDate > today;
+    });
+    
+    filteredCalendarEvents = futureEvents.filter(event => {
         const matchesSearch = !searchTerm || 
             event.title.toLowerCase().includes(searchTerm) ||
             (event.description && event.description.toLowerCase().includes(searchTerm)) ||
@@ -749,26 +776,35 @@ function renderFilteredCalendar() {
                           (document.getElementById('calendarSearchInput').value || 
                            document.getElementById('eventTypeFilter').value) ? [] : calendarEvents;
     
+    // Filter nur zukünftige Termine
+    const today = new Date();
+    const futureEvents = eventsToRender.filter(event => {
+        const eventDate = new Date(event.sortDate);
+        return eventDate > today;
+    });
+    
     calendarGrid.innerHTML = '';
     
-    if (eventsToRender.length === 0 && (document.getElementById('calendarSearchInput').value || 
+    if (futureEvents.length === 0 && (document.getElementById('calendarSearchInput').value || 
         document.getElementById('eventTypeFilter').value)) {
-        calendarGrid.innerHTML = '<div class="no-results">Keine Termine gefunden. Versuchen Sie es mit anderen Suchbegriffen.</div>';
+        calendarGrid.innerHTML = '<div class="no-results">Keine zukünftigen Termine gefunden. Versuchen Sie es mit anderen Suchbegriffen.</div>';
         return;
     }
     
-    eventsToRender.forEach(event => {
+    if (futureEvents.length === 0) {
+        calendarGrid.innerHTML = '<div class="no-results">Keine zukünftigen Termine gefunden.</div>';
+        return;
+    }
+    
+    futureEvents.forEach(event => {
         const eventItem = document.createElement('div');
         eventItem.className = 'calendar-item';
         
-        // Check if event is in the future and has detailed information
-        const eventDate = new Date(event.sortDate);
-        const today = new Date();
-        const isFuture = eventDate > today;
-        const hasDetails = event.location || event.address || event.meetingPoint;
+        // Check if event has detailed information
+        const hasDetails = event.details && event.details.trim() !== '';
         
-        // Add clickable class and cursor if it's a future event with details
-        if (isFuture && hasDetails) {
+        // Add clickable class and cursor if event has details
+        if (hasDetails) {
             eventItem.classList.add('clickable-event');
             eventItem.style.cursor = 'pointer';
             eventItem.addEventListener('click', () => showEventDetails(event));
@@ -783,7 +819,7 @@ function renderFilteredCalendar() {
                 <h3>${event.title}</h3>
                 ${event.time ? `<p class="time">${event.time}</p>` : ''}
                 ${event.description ? `<p>${event.description}</p>` : ''}
-                ${isFuture && hasDetails ? '<p class="click-hint">📋 Klicken für Details</p>' : ''}
+                ${hasDetails ? '<p class="click-hint">📋 Klicken für Details</p>' : ''}
                 ${isAdminMode ? `<button onclick="deleteCalendarEvent(${event.id})" class="btn btn-secondary" style="margin-top: 10px; font-size: 14px;">Löschen</button>` : ''}
             </div>
         `;
@@ -815,6 +851,18 @@ function populateYearFilter() {
 // Print Calendar Function
 function printCalendar() {
     window.print();
+}
+
+// Open Year Program PDF
+function openYearProgram() {
+    try {
+        // Try to open the PDF file
+        window.open('Jahresprogramm 2025.pdf', '_blank');
+    } catch (error) {
+        // Fallback if PDF doesn't exist
+        alert('Das Jahresprogramm PDF konnte nicht gefunden werden. Bitte stellen Sie sicher, dass die Datei "Jahresprogramm 2025.pdf" im Hauptverzeichnis der Website vorhanden ist.');
+        console.error('PDF not found:', error);
+    }
 }
 
 // Update render functions to store sortDate for filtering
