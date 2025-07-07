@@ -277,16 +277,20 @@ function renderCalendar() {
         }
         
         eventItem.innerHTML = `
-            <div class="calendar-date">
-                <span class="day">${event.day}</span>
-                <span class="month">${event.month}</span>
+            <div class="calendar-item-header">
+                <div class="calendar-date">
+                    <span class="day">${event.day}</span>
+                    <span class="month">${event.month}</span>
+                </div>
+                <div class="calendar-content">
+                    <div class="calendar-main-content">
+                        <h3>${event.title}</h3>
+                        ${event.time ? `<p class="time">${event.time}</p>` : ''}
+                        ${event.description ? `<p>${event.description}</p>` : ''}
+                    </div>
+                </div>
             </div>
-            <div class="calendar-content">
-                <h3>${event.title}</h3>
-                ${event.time ? `<p class="time">${event.time}</p>` : ''}
-                ${event.description ? `<p>${event.description}</p>` : ''}
-                ${hasDetails ? '<p class="click-hint">📋 Klicken für Details</p>' : ''}
-            </div>
+            ${hasDetails ? '<p class="click-hint">📋 Details</p>' : ''}
         `;
         calendarGrid.appendChild(eventItem);
     });
@@ -506,16 +510,20 @@ function renderFilteredCalendar() {
         }
         
         eventItem.innerHTML = `
-            <div class="calendar-date">
-                <span class="day">${event.day}</span>
-                <span class="month">${event.month}</span>
+            <div class="calendar-item-header">
+                <div class="calendar-date">
+                    <span class="day">${event.day}</span>
+                    <span class="month">${event.month}</span>
+                </div>
+                <div class="calendar-content">
+                    <div class="calendar-main-content">
+                        <h3>${event.title}</h3>
+                        ${event.time ? `<p class="time">${event.time}</p>` : ''}
+                        ${event.description ? `<p>${event.description}</p>` : ''}
+                    </div>
+                </div>
             </div>
-            <div class="calendar-content">
-                <h3>${event.title}</h3>
-                ${event.time ? `<p class="time">${event.time}</p>` : ''}
-                ${event.description ? `<p>${event.description}</p>` : ''}
-                ${hasDetails ? '<p class="click-hint">📋 Klicken für Details</p>' : ''}
-            </div>
+            ${hasDetails ? '<p class="click-hint">📋 Details</p>' : ''}
         `;
         calendarGrid.appendChild(eventItem);
     });
