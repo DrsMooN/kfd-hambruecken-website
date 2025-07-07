@@ -20,8 +20,8 @@
                 </div>
                 <ul class="nav-menu">
                     <li><a href="#home" class="nav-link">Startseite</a></li>
-                    <li><a href="#gallery" class="nav-link">Unsere Ausflüge</a></li>
                     <li><a href="#about" class="nav-link">Über uns</a></li>
+                    <li><a href="#gallery" class="nav-link">Unsere Ausflüge</a></li>
                     <li><a href="#calendar" class="nav-link">Termine</a></li>
                     <li><a href="#contact" class="nav-link">Kontakt</a></li>
                 </ul>
@@ -35,48 +35,6 @@
             <div class="hero-content">
                 <h2>Willkommen bei der kfd Hambrücken</h2>
                 <p>Starke Frauen gestalten Veränderung - Gemeinsam für Gleichberechtigung und Gleichstellung in Kirche und Gesellschaft.</p>
-            </div>
-        </section>
-
-        <!-- Gallery Section -->
-        <section id="gallery" class="gallery-section">
-            <div class="container">
-                <h2>Unsere Ausflüge</h2>
-                
-                <!-- Search and Filter Controls (Hidden - can be re-enabled by removing style="display: none;") -->
-                <div class="controls-section" style="display: none;">
-                    <div class="search-container">
-                        <input type="text" id="searchInput" placeholder="Ausflüge durchsuchen..." class="search-input">
-                        <button class="search-btn" onclick="performSearch()">🔍</button>
-                    </div>
-                    
-                    <div class="filter-container">
-                        <select id="yearFilter" class="filter-select">
-                            <option value="">Alle Jahre</option>
-                        </select>
-                        <select id="monthFilter" class="filter-select">
-                            <option value="">Alle Monate</option>
-                            <option value="01">Januar</option>
-                            <option value="02">Februar</option>
-                            <option value="03">März</option>
-                            <option value="04">April</option>
-                            <option value="05">Mai</option>
-                            <option value="06">Juni</option>
-                            <option value="07">Juli</option>
-                            <option value="08">August</option>
-                            <option value="09">September</option>
-                            <option value="10">Oktober</option>
-                            <option value="11">November</option>
-                            <option value="12">Dezember</option>
-                        </select>
-                        <button class="clear-filters-btn" onclick="clearFilters()">Filter zurücksetzen</button>
-                    </div>
-                </div>
-                
-                <div class="gallery-grid" id="galleryGrid">
-                    <!-- Ausflüge werden dynamisch geladen -->
-                </div>
-
             </div>
         </section>
 
@@ -138,6 +96,9 @@
                     </div>
                     
                     <div class="about-stats">
+                        <div class="about-image">
+                            <img src="images/wir.jpg" alt="kfd Hambrücken Gruppenfoto" loading="lazy" onerror="this.src='images/placeholder.jpg'">
+                        </div>
                         <div class="stat-item">
                             <div class="stat-number">100+</div>
                             <div class="stat-label">Aktive Mitglieder</div>
@@ -156,6 +117,48 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery-section">
+            <div class="container">
+                <h2>Unsere Ausflüge</h2>
+                
+                <!-- Search and Filter Controls (Hidden - can be re-enabled by removing style="display: none;") -->
+                <div class="controls-section" style="display: none;">
+                    <div class="search-container">
+                        <input type="text" id="searchInput" placeholder="Ausflüge durchsuchen..." class="search-input">
+                        <button class="search-btn" onclick="performSearch()">🔍</button>
+                    </div>
+                    
+                    <div class="filter-container">
+                        <select id="yearFilter" class="filter-select">
+                            <option value="">Alle Jahre</option>
+                        </select>
+                        <select id="monthFilter" class="filter-select">
+                            <option value="">Alle Monate</option>
+                            <option value="01">Januar</option>
+                            <option value="02">Februar</option>
+                            <option value="03">März</option>
+                            <option value="04">April</option>
+                            <option value="05">Mai</option>
+                            <option value="06">Juni</option>
+                            <option value="07">Juli</option>
+                            <option value="08">August</option>
+                            <option value="09">September</option>
+                            <option value="10">Oktober</option>
+                            <option value="11">November</option>
+                            <option value="12">Dezember</option>
+                        </select>
+                        <button class="clear-filters-btn" onclick="clearFilters()">Filter zurücksetzen</button>
+                    </div>
+                </div>
+                
+                <div class="gallery-grid" id="galleryGrid">
+                    <!-- Ausflüge werden dynamisch geladen -->
+                </div>
+
             </div>
         </section>
 
