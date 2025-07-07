@@ -63,7 +63,7 @@ function loadData() {
                 title: "Germersheim",
                 date: "31. August 2021",
                 sortDate: "2021-08-31",
-                image: "images/germersheim.jpg",
+                image: "images/germersheim.JPG",
                 description: "Nachdem 2020 der Ausflug wegen Corona gänzlich ausfallen musste, haben wir 2021 einen neuen Versuch gestartet, ohne Bus, nah bei uns und mit Veranstaltungen nur im Freien. Unser erstes Ziel war eine Nachenfahrt auf dem Altrhein bei Germersheim, wo wir mit zwei Booten die einzigartige Flora und Fauna in diesen geschützten Rheinauen erleben durften und einiges zur Entstehung und Geschichte des Rheines erfuhren. Nach dem Mittagessen, natürlich auch im Freien, erlebten wir eine Führung durch das geschichtsträchtige Germersheim, bevor wir wieder nach Hause aufbrachen. Es hat gut getan, wieder etwas gemeinschaftlich zu unternehmen!"
             }
         ];
