@@ -869,6 +869,7 @@ section h2 {
 /* Contact Section */
 .contact-section {
     background: #f9fafb;
+    padding: 40px 0; /* Reduced padding for minimal content */
 }
 
 .contact-info {
@@ -883,7 +884,7 @@ section h2 {
 }
 
 .contact-info strong {
-    color: #6b46c1;
+    color: #dc005a; /* Updated to match kfd brand color */
 }
 
 /* Buttons */
