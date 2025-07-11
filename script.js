@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     renderGallery();
     renderCalendar();
     setupSearchAndFilters();
+    setupMobileMenu();
 });
 
 // Daten laden 
@@ -608,6 +609,66 @@ function openYearProgram() {
     } catch (error) {
         // If PDF doesn't exist, show friendly message
         alert('Das Jahresprogramm ist noch nicht verfügbar. Bitte versuchen Sie es später erneut oder wenden Sie sich an die Vereinsleitung.');
+    }
+}
+
+// Mobile Menu Functions
+function setupMobileMenu() {
+    const hamburgerMenu = document.getElementById('hamburgerMenu');
+    const navMenu = document.getElementById('navMenu');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    // Toggle mobile menu when hamburger button is clicked
+    if (hamburgerMenu) {
+        hamburgerMenu.addEventListener('click', function() {
+            toggleMobileMenu();
+        });
+    }
+    
+    // Close mobile menu when navigation links are clicked
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            closeMobileMenu();
+        });
+    });
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!hamburgerMenu.contains(event.target) && !navMenu.contains(event.target)) {
+            closeMobileMenu();
+        }
+    });
+    
+    // Close mobile menu when pressing escape key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            closeMobileMenu();
+        }
+    });
+}
+
+function toggleMobileMenu() {
+    const hamburgerMenu = document.getElementById('hamburgerMenu');
+    const navMenu = document.getElementById('navMenu');
+    
+    if (hamburgerMenu && navMenu) {
+        hamburgerMenu.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        
+        // Update aria-label for accessibility
+        const isOpen = navMenu.classList.contains('active');
+        hamburgerMenu.setAttribute('aria-label', isOpen ? 'Menü schließen' : 'Menü öffnen');
+    }
+}
+
+function closeMobileMenu() {
+    const hamburgerMenu = document.getElementById('hamburgerMenu');
+    const navMenu = document.getElementById('navMenu');
+    
+    if (hamburgerMenu && navMenu) {
+        hamburgerMenu.classList.remove('active');
+        navMenu.classList.remove('active');
+        hamburgerMenu.setAttribute('aria-label', 'Menü öffnen');
     }
 }
 
