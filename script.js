@@ -369,6 +369,12 @@ window.addEventListener('click', function(event) {
     if (event.target === impressumModal) {
         closeImpressum();
     }
+    
+    // Image Modal Event Listener
+    const imageModal = document.getElementById('imageModal');
+    if (event.target === imageModal) {
+        closeImageModal();
+    }
 });
 
 // Search and Filter Functions
@@ -650,6 +656,7 @@ function setupMobileMenu() {
     document.addEventListener('keydown', function(event) {
         if (event.key === 'Escape') {
             closeMobileMenu();
+            closeImageModal();
         }
     });
 }
@@ -702,6 +709,33 @@ function closeImpressum() {
     const modal = document.getElementById('impressumModal');
     if (modal) {
         modal.style.display = 'none';
+    }
+}
+
+// Image Modal Functions
+function openImageModal(imageSrc, caption) {
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const imageCaption = document.getElementById('imageCaption');
+    
+    if (modal && modalImage && imageCaption) {
+        modalImage.src = imageSrc;
+        modalImage.alt = caption;
+        imageCaption.textContent = caption;
+        modal.style.display = 'block';
+        
+        // Prevent body scroll when modal is open
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeImageModal() {
+    const modal = document.getElementById('imageModal');
+    if (modal) {
+        modal.style.display = 'none';
+        
+        // Restore body scroll
+        document.body.style.overflow = '';
     }
 }
 

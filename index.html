@@ -18,10 +18,19 @@
                         <p class="nav-subtitle">Katholische Frauengemeinschaft Deutschlands</p>
                     </div>
                 </div>
-                <ul class="nav-menu">
+                
+                <!-- Hamburger Menu Button -->
+                <button class="hamburger-menu" id="hamburgerMenu" aria-label="Menü öffnen">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                
+                <ul class="nav-menu" id="navMenu">
                     <li><a href="#home" class="nav-link">Startseite</a></li>
                     <li><a href="#about" class="nav-link">Über uns</a></li>
                     <li><a href="#gallery" class="nav-link">Unsere Ausflüge</a></li>
+                    <li><a href="#events" class="nav-link">Veranstaltungen</a></li>
                     <li><a href="#calendar" class="nav-link">Termine</a></li>
                     <li><a href="#contact" class="nav-link">Kontakt</a></li>
                 </ul>
@@ -162,6 +171,43 @@
             </div>
         </section>
 
+        <!-- Events Section -->
+        <section id="events" class="events-section">
+            <div class="container">
+                <h2>Veranstaltungen</h2>
+                <div class="events-grid" id="eventsGrid">
+                    <!-- Events werden dynamisch geladen -->
+                    <div class="event-report">
+                        <div class="event-header">
+                            <h3>Moorwanderung am 8.7.2025</h3>
+                            <span class="event-type-badge">Ausflug</span>
+                        </div>
+                        <div class="event-content">
+                            <div class="event-image" onclick="openImageModal('images/moor.jpg', 'Moorwanderung Weingartener Moor')">
+                                <img src="images/moor.jpg" alt="Moorwanderung Weingartener Moor" loading="lazy" onerror="this.src='images/placeholder.jpg'">
+                                <div class="image-overlay">
+                                    <span class="zoom-icon">🔍</span>
+                                </div>
+                            </div>
+                            <div class="event-text">
+                                <p>Wird das Wetter halten, fragten wir uns, als wir uns am Spätnachmittag auf den Weg zum Weingartener Moor machten. Nach einem anfänglichen Regenschauer hatten wir ideales Wetter, um das Moor zu besuchen - es war nicht zu warm und die Schnaken und anderen Insekten hielten sich sehr zurück.</p>
+                                
+                                <p>Nach einer kurzen Einführung über die Entstehungsgeschichte dieses Niedermoores, das Teil der Kinzig-Murr-Rinne ist, erfuhren wir von Herrn Schlingspach, der für die nächsten beiden Stunden unser Führer war, wie wichtig Moore für die Umwelt sind: Moore sind Lebensraum für seltene Pflanzen und Tiere und können enorme Mengen Kohlenstoff binden – mehr als doppelt soviel wie alle Wälder der Erde zusammen! Moore sind also unbedingt schützenswert!</p>
+                                
+                                <p>Wir erlebten, dass durch das heiße Wetter der vergangenen Wochen das Weingartener Moor an vielen Stellen trockengefallen war, womit Pflanzen und Bäume in einem Niedermoor aber normalerweise ganz gut umgehen können. Beim Wandern konnten wir unser Wissen über Bäume auffrischen, wir lernten anhand der Blätter den Hauptbaum eines Moores, die Schwarzerle, aber auch die Robinie, den Spitzahorn und die Pappel kennen.</p>
+                                
+                                <p>Schade war, dass die Blütezeit der großen gelben Wasserlilien schon vorbei war. Der Weg führte uns über einen schmalen Bohlenweg zu einem größeren Flachwassersee, an dem wir von einer Aussichtsplattform auch verschiedene Vögel beobachten konnten. Sicherlich wird es im Frühjahr oder Herbst noch deutlich mehr Tiere zu beobachten geben.</p>
+                                
+                                <p>Herr Schlingspach erzählte uns, dass im Frühjahr Tausende von Amphibien, wie der Springfrosch, in ihre Laichgewässer im Naturschutzgebiet wandern. Der Weg über die Bundesstraße sei dabei eine echte Herausforderung - für die Frösche und die Helfer!</p>
+                                
+                                <p>Nach zwei Stunden ging unser schöner Ausflug zu Ende. Er hat Lust gemacht auch zu einer anderen Jahreszeit wieder einmal zurückzukommen! Anschließend ließen wir den Abend noch in der Gärtnerklause En-Edem ausklingen.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Calendar Section -->
         <section id="calendar" class="calendar-section">
             <div class="container">
@@ -210,10 +256,6 @@
             </div>
         </section>
     </main>
-
-
-
-
 
 
 
@@ -275,6 +317,17 @@
                     E-Mail: kfd.hambruecken@gmail.com</p>
                     <p style="font-size: 14px; color: #888; margin-top: 30px;">Dieses Impressum gilt auch für die Social-Media-Präsenzen des Vereins, sofern vorhanden.</p>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content image-modal-content">
+            <span class="close" onclick="closeImageModal()">&times;</span>
+            <div class="image-modal-body">
+                <img id="modalImage" src="" alt="" class="modal-image">
+                <div class="image-caption" id="imageCaption"></div>
             </div>
         </div>
     </div>
