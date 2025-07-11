@@ -1798,6 +1798,28 @@ footer p {
 .event-text {
     line-height: 1.7;
     color: #374151;
+    display: flex;
+    flex-direction: column;
+    max-height: 300px; /* Maximale Höhe wie das Bild */
+}
+
+.event-text-content {
+    overflow: hidden;
+    padding-right: 10px;
+    line-height: 1.7;
+    max-height: 240px; /* Berechnete Höhe für ca. 8-9 Zeilen */
+    transition: max-height 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .event-text p {
@@ -1808,6 +1830,49 @@ footer p {
 
 .event-text p:last-child {
     margin-bottom: 0;
+}
+
+.read-more-btn {
+    background: linear-gradient(135deg, #dc005a, #e91e63);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 15px;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(220, 0, 90, 0.3);
+}
+
+.read-more-btn:hover {
+    background: linear-gradient(135deg, #a8003f, #c2185b);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(220, 0, 90, 0.4);
+}
+
+.expand-icon {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+.read-more-btn.expanded .expand-icon {
+    transform: rotate(180deg);
+}
+
+.read-more-btn.expanded {
+    background: linear-gradient(135deg, #6b46c1, #8b5cf6);
+    box-shadow: 0 2px 10px rgba(107, 70, 193, 0.3);
+}
+
+.read-more-btn.expanded:hover {
+    background: linear-gradient(135deg, #553c9a, #7c3aed);
+    box-shadow: 0 4px 15px rgba(107, 70, 193, 0.4);
 }
 
 /* Mobile Responsive für Events */
@@ -1837,6 +1902,14 @@ footer p {
     
     .event-image img {
         height: 200px;
+    }
+    
+    .event-text {
+        max-height: none; /* Höhenbegrenzung auf Mobile entfernen */
+    }
+    
+    .event-text-content {
+        max-height: none; /* Höhenbegrenzung auf Mobile entfernen */
     }
     
     .event-text p {

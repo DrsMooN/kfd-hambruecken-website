@@ -739,4 +739,36 @@ function closeImageModal() {
     }
 }
 
+// Event Text Toggle Functions
+function toggleEventText(button) {
+    const eventText = button.closest('.event-text');
+    const textContent = eventText.querySelector('.event-text-content');
+    const readMoreText = button.querySelector('.read-more-text');
+    const readLessText = button.querySelector('.read-less-text');
+    const expandIcon = button.querySelector('.expand-icon');
+    
+    // Check if we're on mobile
+    const isMobile = window.innerWidth <= 768;
+    
+    if (button.classList.contains('expanded')) {
+        // Collapse
+        readMoreText.style.display = 'inline';
+        readLessText.style.display = 'none';
+        button.classList.remove('expanded');
+        
+        // Only set height restriction on desktop
+        if (!isMobile) {
+            textContent.style.maxHeight = '240px';
+            eventText.style.maxHeight = '300px';
+        }
+    } else {
+        // Expand
+        readMoreText.style.display = 'none';
+        readLessText.style.display = 'inline';
+        button.classList.add('expanded');
+        textContent.style.maxHeight = 'none';
+        eventText.style.maxHeight = 'none';
+    }
+}
+
  
