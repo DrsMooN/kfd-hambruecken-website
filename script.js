@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     renderCalendar();
     setupSearchAndFilters();
     setupMobileMenu();
+    setupImpressum();
 });
 
 // Daten laden 
@@ -362,6 +363,12 @@ window.addEventListener('click', function(event) {
     if (event.target === galleryDetailsModal) {
         closeGalleryDetails();
     }
+    
+    // Impressum Modal Event Listener
+    const impressumModal = document.getElementById('impressumModal');
+    if (event.target === impressumModal) {
+        closeImpressum();
+    }
 });
 
 // Search and Filter Functions
@@ -669,6 +676,32 @@ function closeMobileMenu() {
         hamburgerMenu.classList.remove('active');
         navMenu.classList.remove('active');
         hamburgerMenu.setAttribute('aria-label', 'Menü öffnen');
+    }
+}
+
+// Impressum Functions
+function setupImpressum() {
+    const impressumLink = document.getElementById('impressumLink');
+    
+    if (impressumLink) {
+        impressumLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            showImpressum();
+        });
+    }
+}
+
+function showImpressum() {
+    const modal = document.getElementById('impressumModal');
+    if (modal) {
+        modal.style.display = 'block';
+    }
+}
+
+function closeImpressum() {
+    const modal = document.getElementById('impressumModal');
+    if (modal) {
+        modal.style.display = 'none';
     }
 }
 

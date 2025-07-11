@@ -1628,4 +1628,65 @@ footer p {
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     object-fit: cover;
-} 
+}
+
+/* Impressum Modal */
+.impressum-modal-content {
+    max-width: 800px;
+    max-height: 80vh;
+    overflow-y: auto;
+    margin: 5% auto;
+    font-size: 14px;
+}
+
+.impressum-content {
+    padding: 20px;
+}
+
+.impressum-content h2 {
+    text-align: center;
+    color: #dc005a;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.impressum-content h3 {
+    color: #dc005a;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.impressum-content p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.impressum-content ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.impressum-content li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.impressum-content strong {
+    color: #dc005a;
+}
+
+/* Footer Link */
+.impressum-link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.impressum-link:hover {
+    color: white;
+    text-decoration: underline;
+}
