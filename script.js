@@ -669,9 +669,10 @@ function toggleMobileMenu() {
         hamburgerMenu.classList.toggle('active');
         navMenu.classList.toggle('active');
         
-        // Update aria-label for accessibility
+        // Update aria-label and aria-expanded for accessibility
         const isOpen = navMenu.classList.contains('active');
         hamburgerMenu.setAttribute('aria-label', isOpen ? 'Menü schließen' : 'Menü öffnen');
+        hamburgerMenu.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     }
 }
 
@@ -683,6 +684,7 @@ function closeMobileMenu() {
         hamburgerMenu.classList.remove('active');
         navMenu.classList.remove('active');
         hamburgerMenu.setAttribute('aria-label', 'Menü öffnen');
+        hamburgerMenu.setAttribute('aria-expanded', 'false');
     }
 }
 

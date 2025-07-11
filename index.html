@@ -1,9 +1,33 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de-DE">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>kfd Hambrücken - Katholische Frauengemeinschaft Deutschlands</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Die Katholische Frauengemeinschaft (kfd) Hambrücken - Starke Frauen gestalten Veränderung. Wir setzen uns für Gleichberechtigung in Kirche und Gesellschaft ein. Termine, Ausflüge und Veranstaltungen.">
+    <meta name="keywords" content="kfd, Katholische Frauengemeinschaft, Hambrücken, Frauenverband, katholisch, Kirche, Gleichberechtigung, Frauen, Veranstaltungen, Ausflüge, Termine">
+    <meta name="author" content="kfd Hambrücken">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="de">
+    <meta name="revisit-after" content="30 days">
+    <link rel="canonical" href="https://kfd-hambruecken.de/">
+    
+    <!-- Open Graph / Social Media Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kfd-hambruecken.de/">
+    <meta property="og:title" content="kfd Hambrücken - Katholische Frauengemeinschaft Deutschlands">
+    <meta property="og:description" content="Die Katholische Frauengemeinschaft (kfd) Hambrücken - Starke Frauen gestalten Veränderung. Wir setzen uns für Gleichberechtigung in Kirche und Gesellschaft ein.">
+    <meta property="og:image" content="https://kfd-hambruecken.de/images/kfd-logo.svg">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="kfd Hambrücken">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="kfd Hambrücken - Katholische Frauengemeinschaft Deutschlands">
+    <meta name="twitter:description" content="Die Katholische Frauengemeinschaft (kfd) Hambrücken - Starke Frauen gestalten Veränderung. Wir setzen uns für Gleichberechtigung in Kirche und Gesellschaft ein.">
+    <meta name="twitter:image" content="https://kfd-hambruecken.de/images/kfd-logo.svg">
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="images/kfd-logo.svg">
@@ -12,13 +36,49 @@
     
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data / Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "kfd Hambrücken",
+        "alternateName": "Katholische Frauengemeinschaft Deutschlands Hambrücken",
+        "url": "https://kfd-hambruecken.de",
+        "logo": "https://kfd-hambruecken.de/images/kfd-logo.svg",
+        "description": "Die Katholische Frauengemeinschaft (kfd) Hambrücken setzt sich für Gleichberechtigung und Gleichstellung in Kirche und Gesellschaft ein.",
+        "foundingDate": "1914",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Kirchstraße 2",
+            "addressLocality": "Hambrücken",
+            "postalCode": "76707",
+            "addressCountry": "DE"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "kfd.hambruecken@gmail.com",
+            "contactType": "General Information"
+        },
+        "memberOf": {
+            "@type": "Organization",
+            "name": "Katholische Frauengemeinschaft Deutschlands",
+            "alternateName": "kfd"
+        },
+        "sameAs": [],
+        "areaServed": {
+            "@type": "Place",
+            "name": "Hambrücken"
+        }
+    }
+    </script>
 </head>
 <body>
     <header>
-        <nav class="navbar">
+        <nav class="navbar" role="navigation" aria-label="Hauptnavigation">
             <div class="nav-container">
                 <div class="nav-brand">
-                    <img src="images/kfd-logo.svg" alt="kfd Logo" class="nav-logo">
+                    <img src="images/kfd-logo.svg" alt="kfd Hambrücken Logo - Katholische Frauengemeinschaft Deutschlands" class="nav-logo">
                     <div class="nav-title-group">
                         <h1 class="nav-title">kfd Hambrücken</h1>
                         <p class="nav-subtitle">Katholische Frauengemeinschaft Deutschlands</p>
@@ -26,19 +86,19 @@
                 </div>
                 
                 <!-- Hamburger Menu Button -->
-                <button class="hamburger-menu" id="hamburgerMenu" aria-label="Menü öffnen">
+                <button class="hamburger-menu" id="hamburgerMenu" aria-label="Menü öffnen" aria-expanded="false">
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
                 </button>
                 
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="#home" class="nav-link">Startseite</a></li>
-                    <li><a href="#about" class="nav-link">Über uns</a></li>
-                    <li><a href="#gallery" class="nav-link">Unsere Ausflüge</a></li>
-                    <li><a href="#events" class="nav-link">Veranstaltungen</a></li>
-                    <li><a href="#calendar" class="nav-link">Termine</a></li>
-                    <li><a href="#contact" class="nav-link">Kontakt</a></li>
+                <ul class="nav-menu" id="navMenu" role="menu">
+                    <li role="none"><a href="#home" class="nav-link" role="menuitem">Startseite</a></li>
+                    <li role="none"><a href="#about" class="nav-link" role="menuitem">Über uns</a></li>
+                    <li role="none"><a href="#gallery" class="nav-link" role="menuitem">Unsere Ausflüge</a></li>
+                    <li role="none"><a href="#events" class="nav-link" role="menuitem">Veranstaltungen</a></li>
+                    <li role="none"><a href="#calendar" class="nav-link" role="menuitem">Termine</a></li>
+                    <li role="none"><a href="#contact" class="nav-link" role="menuitem">Kontakt</a></li>
                 </ul>
             </div>
         </nav>
@@ -112,7 +172,7 @@
                     
                     <div class="about-stats">
                         <div class="about-image">
-                            <img src="images/wir.jpg" alt="kfd Hambrücken Gruppenfoto" loading="lazy" onerror="this.src='images/placeholder.jpg'">
+                            <img src="images/wir.jpg" alt="Gruppenfoto der kfd Hambrücken Mitglieder - Katholische Frauengemeinschaft Deutschlands" loading="lazy" onerror="this.src='images/placeholder.jpg'">
                         </div>
                         <div class="stat-item">
                             <div class="stat-number">100+</div>
